@@ -1,0 +1,99 @@
+1) Converting String into Perfect case
+
+public class Array1 {
+	 public static void main(String[] args) {
+	 perfectCase("vIJAY");
+	}
+	 static String perfectCase(String mani) {
+	 char v; char[] t;
+ char vijay = mani.charAt(0);
+ if(vijay >= 'a' && vijay <= 'z') {
+	 v = (char) (vijay - 32);
+ System.out.print(v);
+ }
+ else {
+	 v = (char)(vijay-0);
+	 System.out.print(v);
+ }
+ for(int i = 1; i < mani.length(); i++) {
+	t = mani.toCharArray();
+	if(t[i] >= 'A' && t[i] <='Z') {
+	v = (char)(t[i] + 32);
+	 System.out.print(v);}
+	
+ else {
+	 v = (char)(t[i] - 0);
+	 System.out.print(v);
+ }}
+return mani;
+ }
+	 
+	 }
+---------------------------------------------------------------------------------------------------------
+2) Upper case to lower case
+public class Array {
+	
+
+	public static void main(String[] args) {
+		upperCase("manivarmaN vijay surendRan");
+	}
+
+	public static String upperCase(String string) {
+		
+		for(int i = 0; i < string.length();i++) {
+			char check =string.charAt(i);
+			char v;
+
+			if(check >= 'a' && check <= 'z' ){
+			 v = (char) (check - 32);
+			System.out.print(v);
+		}
+			else if(check == ' ') {
+			System.out.print(check = ' ');	
+			}
+		else if(check >= 'A' && check <= 'Z') {
+			 v = (char) (check - 0);
+			System.out.print(v);
+		}
+	
+		}
+		return string;
+	}
+
+}
+--------------------------------------------------------------------------------
+3)capital to small letter
+
+public class Array {
+	
+
+	public static void main(String[] args) {
+		upperCase("manivarmaN vijay surendRan");
+	}
+
+	public static String upperCase(String string) {
+		
+		for(int i = 0; i < string.length();i++) {
+			char check =string.charAt(i);
+			char v;
+
+			if(check >= 'A' && check <= 'Z' ){
+			 v = (char) (check + 32);
+			System.out.print(v);
+		}
+			else if(check == ' ') {
+			System.out.print(check = ' ');	
+			}
+		else if(check >= 'a' && check <= 'z') {
+			 v = (char) (check - 0);
+			System.out.print(v);
+		}
+		
+	
+		}
+		return string;
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
