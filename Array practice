@@ -97,3 +97,34 @@ public class Array {
 }
 
 -------------------------------------------------------------------------------------------------------------------------------
+repaceAll();
+public class Array {
+    public static void main(String[] args) {
+        String line = "Love is the rhythm, the art and the rhythm poem.";
+        String target = "rhythm";
+        String replacement = "beat";
+        String result = "";
+        for (int i = 0; i < line.length(); i++) {
+            boolean match = true;
+            for (int j = 0; j < target.length(); j++) {
+                if ( line.charAt(i+j) != target.charAt(j)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                result += replacement;
+                i += target.length() - 1; // Skip the matched part
+            } else {
+                result += line.charAt(i);
+            }
+        }
+        System.out.println(result);
+    	
+    	
+    	
+    }
+}
+
+
+
