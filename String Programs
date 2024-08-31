@@ -1,0 +1,181 @@
+PALINDROME METHOD
+--------------------------------------------------------------------------------------------------
+public class Palindrome {
+    public static void main(String[] args) {
+        String valid = "nun";
+        char[] chars = valid.toCharArray();
+        char[] reversedChars = new char[chars.length];
+        
+        for (int i = chars.length - 1; i >= 0; i--) {
+            reversedChars[chars.length - 1 - i] = chars[i];
+        }
+        
+        boolean isPalindrome = true;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] != reversedChars[i]) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        
+        System.out.print("Reversed String: ");
+        for (char c : reversedChars) {
+            System.out.print(c);
+        }
+        System.out.println();
+        
+        if (isPalindrome) {
+            System.out.println("The string is a palindrome.");
+        } else {
+            System.out.println("The string is not a palindrome.");
+        }
+    }
+
+}
+
+
+
+REPLACE A STRING
+--------------------------------------------------------------------------------------------------
+Type 1
+public class ReplaceString {
+    static String sentence = "Hi Good Morning";
+    static String exist = "Hi";
+    static String modify = "AfterNoon";
+    static String replace = "";
+
+    public static void main(String[] args) {
+        char[] fish = sentence.toCharArray();  
+        char[] exists = exist.toCharArray();  
+        char[] change = modify.toCharArray(); 
+
+        for (int i = 0; i < fish.length; i++) {
+            // Check if the current character matches the start of the word "Good"
+            if (i <= fish.length - exists.length && fish[i] == exists[0]) {
+                // Check if the whole word "Good" is present here
+                boolean found = true;
+                for (int j = 0; j < exists.length; j++) {
+                    if (fish[i + j] != exists[j]) {
+                        found = false;
+                        break;
+                    }
+                }
+                if (found) {
+                    for (int k = 0; k < change.length; k++) {
+                        replace += change[k];
+                    }
+                    i += exists.length - 1; // Skip the length of "Good"
+                } else {
+                    replace += fish[i];  
+                }
+            } else {
+                replace += fish[i];  // If not starting with "Good", just copy the character
+            }
+        }
+
+        System.out.println(replace);  // Output the final replaced sentence
+
+    }
+}
+-----------------------------------------------------------------------------------------------
+Type 2
+public class ReplaceString {
+    static String sentence = "Hi Good Morning";
+    static String exist = "Good";
+    static String modify = "Happy";
+    static String replace = "";
+    static boolean check = true;
+
+    public static void main(String[] args) {
+        char[] fish = sentence.toCharArray();  // Convert the sentence into a character array
+        char[] change = modify.toCharArray();  // Convert the word to replace with into a character array
+        char[] exists = exist.toCharArray();   // Convert the word to be replaced into a character array
+
+        int i = 0;
+        while (i < fish.length) {
+            check = true;
+
+            // Check if the substring exists[i] starts at position i
+            int k = 0;
+            while (k < exists.length && i + k < fish.length && exists[k] == fish[i + k]) {
+                k++;
+            }
+
+            if (k == exists.length) {
+                // If the word "Good" is found, replace it with "Happy"
+                for (int j = 0; j < change.length; j++) {
+                    replace += change[j];
+                }
+                i += exists.length; // Skip the length of the word "Good"
+            } else {
+                // If the current character does not match the word, add it to the result
+                replace += fish[i];
+                i++;
+            }
+        }
+
+        System.out.println(replace);
+    }
+}
+
+------------------------------------------------------------------------------------------------
+REMOVEALL
+
+public class RemoveAll
+{ 
+ static boolean match; 
+ public static void main(String[] args) { 
+      
+  String phrase = "love is art then art"; 
+  String target = "artt"; 
+  for(int i=0;i<phrase.length();i++)  
+  { 
+   match = true;  
+    for(int j=0;j<target.length();j++)  
+    { 
+     if(phrase.charAt(i+j)!=target.charAt(j) && phrase.charAt(i+j)!="") 
+     { 
+     match = false;
+     break; 
+     } 
+    } 
+   if(match) 
+    break; 
+  } 
+  if(match) 
+   System.out.println("present"); 
+  else 
+   System.out.println("not present"); 
+  
+  } 
+ 
+}
+-----------------------------------------------------------------------------------------------
+STARTWITH
+public class StartsWith {
+public static void main(String[] args) {
+String s1 = "Stay happy and focused";
+String s2 = "stay";
+char[] c1 = s1.toCharArray();
+char[] c2 = s2.toCharArray();
+boolean starts = true;
+int j=0;
+for(int i=0; j<c2.length; i++) {
+if(c1[i]==c2[j]) {
+  j++;
+continue;
+}
+else {
+starts=false;
+System.out.println("Not starts with");
+break;
+}
+}
+if(starts) {
+System.out.println("Starts with");
+}
+}
+}
+
+
+
