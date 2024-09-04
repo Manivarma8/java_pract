@@ -176,6 +176,36 @@ System.out.println("Starts with");
 }
 }
 }
-
+–--------------+-----+++-+--++++--++++++-
+CONTAINS PROGRAM
+public class Program
+{
+    public static void main(String[] args) {
+      String m = "manivarmaaaaan";
+      int h = 0;
+      //char[] f = m.toCharArray();
+      char v = 'a';
+      boolean g = false;
+      int count =0;
+      int i = 0;
+      while( i <= m.length()-1){
+          
+          if(m.charAt(i) == v){
+              g = true;
+              count++;
+               h = i;
+         System.out.print("index no :" + h);
+         System.out.println();
+          }
+  i++;
+      }
+      if(g){
+System.out.println("contains : " + count);
+      }
+      else{
+          System.out.println("not contains");
+      }
+    }
+}
 
 
