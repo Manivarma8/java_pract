@@ -1,4 +1,4 @@
-PALINDROME METHOD
+mALINDROME METHOD
 --------------------------------------------------------------------------------------------------
 public class Palindrome {
     public static void main(String[] args) {
@@ -208,4 +208,40 @@ System.out.println("contains : " + count);
     }
 }
 
+-_----------------++++++---+---+--+++-+_-----++++
 
+ANAGRAM
+class HelloWorld {
+    public static void main(String[] args) {
+     String m = "Hi good morning";
+     String  v = "ig";
+     String u = "";
+     boolean k = false;
+ for(int i = 0; i <= m.length()-
+ v.length(); i++){
+     u = "";
+  for(int j = 0; j < v.length(); j++){
+      
+          u += m.charAt(i+j);
+          
+      }
+      if(u.equals(v)){
+          k = true;
+          break;
+      }
+      else{
+          k = false;
+      }
+     }
+     
+   if(k){
+       System.out.print("exist");
+   }
+   else{
+       System.out.print("not exist");
+   }
+     
+     
+     
+    }
+}
