@@ -1,4 +1,34 @@
+Duplicate
 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      // find duplicate
+      //create for loop j and k 
+      //print v[j] != v[k]
+      //turn the value of v[k] = '*' whether
+      // it is repeat
+    int[] v= {1,2,3,4,4,2,1,7,4,9,7,6};
+   for(int j = 0; j < v. length-1; j++){
+   int c = 1;
+     for(int k = j+1; k < v. length; k++){
+       if(v[j] == v[k]){
+         c++;
+         v[k] = '*';
+       }
+       else{
+         continue;
+         
+       }
+     }
+     if(c == 1  &&  v[j] != '*'){
+       System.out.println(" duplicates are " + v[j]);
+     }
+   }
+      
+    }
+}
 
 --------------+++++++---+----------++---------+
 
