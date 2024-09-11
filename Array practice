@@ -106,15 +106,15 @@ public class Array {
         String result = "";
         for (int i = 0; i < line.length(); i++) {
             boolean match = true;
-            for (int j = 0; j < target.length(); j++) {
-                if ( line.charAt(i+j) != target.charAt(j)) {
+    for (int j = 0; j < target.length(); j++) {
+    if ( line.charAt(i+j) != target.charAt(j)) {
                     match = false;
                     break;
                 }
             }
             if (match) {
                 result += replacement;
-                i += target.length() - 1; // Skip the matched part
+                i += target.length() - 1; 
             } else {
                 result += line.charAt(i);
             }
