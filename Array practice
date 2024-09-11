@@ -97,7 +97,7 @@ public class Array {
 }
 
 -------------------------------------------------------------------------------------------------------------------------------
-repaceAll();
+replaceAll();
 public class Array {
     public static void main(String[] args) {
         String line = "Love is the rhythm, the art and the rhythm poem.";
@@ -126,5 +126,27 @@ public class Array {
     }
 }
 
+--------------+++++++---+----------++---------+
 
+Count the repeated numbers
 
+class HelloWorld {
+   public static void main(String[] args) {
+ int[] v = {1,4, 2,3,4,4,5,5,1,6,5};
+for(int i = 0; i < v. length-1; i++){
+int c = 1;
+for(int j = i + 1; j < v. length; j++){
+   if(v[i] != v[j]){
+      continue; 
+   }
+   else{
+       c++;
+       v[j] = '*';
+   }
+   
+    }if(c > 1 && v[i] != '*'){
+  System.out.println(v[i] + " : " + c );
+    }
+}
+    }
+}
