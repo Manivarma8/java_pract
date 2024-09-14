@@ -78,3 +78,31 @@ class HelloWorld {
     }
 }
 ---------------------------------------------------------------------------------------
+FIRST AND SECOND MAXIMUM
+class HelloWorld {
+
+    public static void main(String[] args) {
+    //write a wrapper class MIN_VALUE
+   int fmax = Integer.MIN_VALUE;
+   int smax = Integer.MIN_VALUE;
+   int[] num = {23,11,1997};
+   //Write a for loop to iterate each number
+   for(int i = 0; i < num.length; i++){
+   //write a if condition whether greater than fmax with current iteration  
+   if(fmax < num[i]){
+       //keep smax is fmax;
+       smax = fmax;
+       //fmax is currentIteration
+       fmax = num[i];
+   }
+   //write else condition whether lesser than fmax and smax greater than current iteration
+   else if (fmax < num[i] && smax < num[i] ){
+       smax = num[i];
+   }
+   }
+   System.out.println("The First Maximum number is " + fmax);
+   System.out.println("The Second Maximum number is " + smax);
+   
+    }
+}
+
