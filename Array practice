@@ -105,4 +105,37 @@ class HelloWorld {
    
     }
 }
+-----------------------------------------------------------------------------------------------
+Even in Ascending Add in Decending
+
+class HelloWorld {
+    public static void main(String[] args) {
+      
+int[] v ={34,32,30,28,26,24,22,20,18,16,14,12,10,8,6,4,2};
+//create a forloop for the i and j keep i + 1 to check its own line
+for(int i = 0; i <= v.length-1; i++){
+      
+    for(int j = i+1; j < v.length; j++){
+ //having if condition to get the descending order from which one by one
+ //keep the variable to place the unusual value;
+  int var = 0;
+      if(v[i] % 2 == 1 && v[j] % 2 == 1 && v[i] < v[j]) {
+            var = v[j];
+            v[j] = v[i];
+            v[i] = var;     
+            }
+
+    
+     else if(v[i] % 2 == 0 && v[i] % 2 == 0 && v[i] > v[j]) {
+            var = v[j];
+            v[j] = v[i];
+            v[i] = var;  
+            }}
+     
+    //Filter the even number turn the odd one 
+    System.out.print(v[i] + " ");
+}
+        
+    }
+    }
 
