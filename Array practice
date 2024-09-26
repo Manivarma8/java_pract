@@ -229,5 +229,19 @@ class HelloWorld {
    }
     }
 }
-
+------------------------------------------------------------------------------------------
+Factorial 
+class HelloWorld {
+    public static void main(String[] args) {
+//take a number and multiply with its own substraction values;
+int v = 10;
+int y = v;
+int m = 1;
+for(int i = 1; i <= v; i++){
+m = m * y;
+y--;
+}
+System.out.print(m);
+    }
+}
 
