@@ -206,4 +206,28 @@ public class Gmail {
 	 
 	 
 }
+---------------------------------------------------------------------
+PALINDROME
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+   int o = 1221;
+   int y= o;
+   int p = 0;
+   while(o > 0){
+       int m = o % 10;
+       p = p * 10 + m;
+           
+       o/=10;
+   }
+   if(p == y){
+    System.out.print("Palindrome");   
+   }
+   else{
+   System.out.print("not");
+       
+   }
+    }
+}
+
 
