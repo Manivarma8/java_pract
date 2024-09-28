@@ -244,4 +244,43 @@ y--;
 System.out.print(m);
     }
 }
+---------------------------------------------------------------------------------------------
+BUBBLE SORT WITH BINARY SEARCH
 
+package mani;
+
+
+public class Gmail  {
+	    public static void main(String[] args) {
+	//sort the array 
+	int[] arr = {21,9,1,2,10,8,2,1};
+	int t = 9;
+	int i = 0;
+	int k = 0;
+	while(i < arr.length-1){
+	    for(int j = 0; j < arr.length-1-i; j++){ 
+	    if(arr[j] > arr[j + 1]){
+	        int r = arr[j];
+	        arr[j] = arr[j + 1];
+	        arr[j + 1] = r;
+	    } 
+	}
+	i++;
+	}
+
+	// 1 1 2 2 8 9 10 21 
+int m = arr.length/2;
+	while(arr[m] != t) {
+	 if(arr[m] > t) {
+		 m--;
+	 }
+	 else if(arr[m] < t) {
+		 m++;
+	 }
+	 
+	}
+System.out.println("The number which you have asked reside in "+  m +"th" + " Position");
+
+	    }
+
+	}
