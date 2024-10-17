@@ -310,3 +310,38 @@ class HelloWorld {
     }
     
 }
+-----------------------------------------------------------------
+ADOM'S NUMBER
+class HelloWorld {
+     public static void main(String[] args) {
+        int[] adoms = {12,13,14,15,16,19,20};
+        for(int i = 0; i < adoms.length;i++){
+      System.out.println(adom(adoms[i]));
+        }
+    }
+    static int reverse(int k){
+       int n = 0;
+         while(k > 0){
+          int i = k % 10;
+           n = n * 10 + i;
+          k/=10;
+      }
+      return n;
+    }
+   static String adom(int k){
+        String box = "";
+      int s = k * k;//144
+    int n = reverse(k);
+      int y = n * n;//21*21 = 441
+      int o = reverse(y);//144
+      if(s == o){
+        box = k + " ----> adom";
+      }
+      else{
+        box = k + " ----> not adom ";
+      }
+      return box;
+    } 
+   
+}
+--------------------------------------------------------------------------
