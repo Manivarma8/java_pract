@@ -91,3 +91,54 @@ as.add(6);
 	System.out.print(dup + " ");
 }
 }
+-------------------------------------------------
+COMPARABLE AND COMPARATOR
+package packages;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public  class Java8 implements Comparator<Java8>,Comparable <Java8>{
+	int id;
+	String peyar;
+	Java8(int id, String peyar){
+		this.id = id;
+		this.peyar = peyar;
+	}
+
+
+Java8(){}
+
+	public String toString() {
+		return "id " + id+  ", " + "peyar : " + peyar;
+	}
+public int compareTo(Java8 m1) {
+	return this.id - m1.id;
+}
+	@Override
+    public int compare(Java8 o1, Java8 o2) {
+        return o1.peyar.compareTo(o2.peyar); // Sorting by name
+    }
+	public static void main(String[] args) {
+		List<Java8> ad = new ArrayList<>();
+		ad.add(new Java8(100,"Zanivarman"));
+		ad.add(new Java8(210,"Aijay"));
+		ad.add(new Java8(300,"Burendran"));
+		
+		Collections.sort(ad);
+		for(Java8 j : ad) {
+			System.out.println(j);
+		}
+		
+		System.out.println("----------------------------");
+			Collections.sort(ad, new Java8());
+		
+		 for(Java8 k : ad) {
+		System.out.println(k);
+	}
+	
+	}	
+
+}
