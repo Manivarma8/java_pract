@@ -42,4 +42,31 @@ public class Collect {
      showcaseCollectionsUsage();  
  }  
 }  
+_________________________________________________________________________________________________________________________
+3)ASCENDING ORDER
+public class Collect {  
+ static void showcaseCollectionsUsage() {  
 
+	 
+	 //create an ArrayList 
+	 List <Integer> V= new ArrayList();
+	 V.addAll(Arrays.asList(11,10,3,33,22,9,89));
+	 for(int i = 0; i < V.size()-1; i++) {
+		for(int j = i + 1; j < V.size(); j++) {
+			int temp = 0;
+			if(V.get(i) > V.get(j)) {
+				temp = V.get(j);
+				V.set(j, V.get(i));
+				V.set(i, temp);
+				
+			}
+			
+		}
+	 }
+	 System.out.println(V);
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
+------------------------------------------------------------------------------------------------
