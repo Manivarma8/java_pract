@@ -1,1 +1,45 @@
+1) REMOVE DUPLICATE FROM AN COLLECTION
+-----------------------------------
+public class Collect {  
+ static void showcaseCollectionsUsage() {  
+
+	//create array list and add with some lists
+	 List a = new ArrayList();
+	 a.add("Manivarman");
+	 a.add("Manivarman");
+	 a.add(1);
+	 a.add(1);
+	 
+	 //create hashset and eliminate the duplicate
+	 Set s = new HashSet();
+	 s.addAll(a);
+	 
+	 System.out.println(s);
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
+_____________________________________________________________________________________________________________________
+
+2)Count the frequency of the words from the String 
+public class Collect {  
+ static void showcaseCollectionsUsage() {  
+
+//	 Create the ArrayList in String 
+	 List <String> L = new ArrayList();
+	 L.addAll(Arrays.asList("manivarman", "Vijay","manivarman", "Vijay","manivarman", "Vijay", "Sri"));
+	 Map <String, Integer> map = new HashMap();
+	 for(String g : L) {
+		 if(L.contains(g)) {
+			 map.put(g, map.getOrDefault(g, 0)+1);
+		 }
+	 }
+	 System.out.println(map);
+	 
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
 
