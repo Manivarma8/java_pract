@@ -70,3 +70,54 @@ public class Collect {
  }  
 }  
 ------------------------------------------------------------------------------------------------
+4)Maximum 
+public class Collect {  
+ static void showcaseCollectionsUsage() {  	 
+	 List<Integer>  g = new ArrayList();
+	 g.addAll(Arrays.asList(998288,11,1997,29900,20000000));
+	 int temp = 0;
+	 int max = g.get(0);
+	 for(int i = 1; i < g.size(); i++) {
+		if(g.get(i) < max){
+			max = g.get(i);
+		}
+	 }
+	 System.out.println(max);
+	
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
+----------------------------------------------------------------------------------------------------
+5)Map Traversal
+
+public class Collect {  
+ static void showcaseCollectionsUsage() {  	 
+	 
+	 List<Integer> n = new ArrayList();
+	 List<String> m = new ArrayList();
+Map <String, Integer> map = new HashMap();
+map.put("Manivarman",1);
+map.put("Vijay",2);
+map.put("Bhuvaneswari",3);
+map.put("Surendran",4);
+map.put("Sri",5);
+
+
+for(Map.Entry<String, Integer> k : map.entrySet()) {
+	m.add(k.getKey());
+	n.add(k.getValue());
+	
+}
+System.out.println(m);
+System.out.println(n);
+	
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
+
+
+
