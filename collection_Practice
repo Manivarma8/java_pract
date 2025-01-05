@@ -118,6 +118,33 @@ System.out.println(n);
      showcaseCollectionsUsage();  
  }  
 }  
+---------------------------------------------------------------------------------------
+1)FIRST UNIQUE CHARACTER
+public class Collect {  
+ static void showcaseCollectionsUsage() {  	 
+	 
+	 
+	 List<Character> m = new ArrayList();
+Map <Character, Integer> map = new LinkedHashMap();
+	String g = "manivarman";
+	
+	for(char f : g.toCharArray()) {
+		map.put(f, map.getOrDefault(f, 0)+1);
+	}
+	
+ for(Map.Entry<Character, Integer> H : map.entrySet()) {
+	 if(H.getValue() == 1) {
+		 System.out.print(H.getKey()+" ");
+		 break;
+		 
+	 }
+ }
+ 
+ }  
+ public static void main(String[] args) {  
+     showcaseCollectionsUsage();  
+ }  
+}  
 
 
 
